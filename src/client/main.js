@@ -1,29 +1,24 @@
 import "./style.css";
 
-document.querySelector("body").innerHTML = `
-<div id="main_container">
-<h1>main container</h1>
-</div>
-`;
-// navbar with web
-/* 
-const template = document.createElement("div");
-template.id = "mainContainer";
-template.innerHTML = `<div>inicio</div>`;
-console.log(template);
-class WhatsUp extends HTMLElement {
-  constructor() {
-    super();
-    this.template = template;
-    this.innerHTML = `
-    <style>
-    @import "./styles.css";
-    </style>
-    ${this.template.innerHTML}
-    <h1>ssssssssss</h1>
-    `;
-  }
-}
+import { setupCounter } from "./counter.js";
+import javascriptLogo from "./javascript.svg";
 
-window.customElements.define("whats-up", WhatsUp);
- */
+document.querySelector("#app").innerHTML = `
+  <div>
+    <a href="https://vitejs.dev" target="_blank">
+      <img src="/vite.svg" class="logo" alt="Vite logo" />
+    </a>
+    <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript" target="_blank">
+      <img src="${javascriptLogo}" class="logo vanilla" alt="JavaScript logo" />
+    </a>
+    <h1>Hello World!!👺</h1>
+    <div class="card">
+      <button id="counter" type="button"></button>
+    </div>
+    <p class="read-the-docs">
+      Click on the Vite logo to learn more
+    </p>
+  </div>
+`;
+
+setupCounter(document.querySelector("#counter"));
