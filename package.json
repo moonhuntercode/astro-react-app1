@@ -2,26 +2,27 @@
   "name": "vite-express-app",
   "description": "vite-express template",
   "private": true,
-  "version": "0.0.2",
+  "version": "0.0.3",
   "type": "module",
   "author": "victor code",
   "bin": {
-    "note":"./test.js"
+    "note": "./test.js"
   },
   "scripts": {
-    "dev": "clear && nodemon src/server/main.js -w src/server",
+    "d": "nodemon src/server/main.js -w src/server",
     "start": "NODE_ENV=production node src/server/main.js",
     "build": "vite build"
   },
   "devDependencies": {
-    "nodemon": "^3.0.1",
-    "vite": "^5.0.2"
+    "nodemon": "^3.1.7",
+    "vite": "^5.4.10"
   },
   "dependencies": {
-    "cookie-parser": "^1.4.6",
-    "debug": "^4.3.4",
-    "express": "^4.18.2",
+    "cookie-parser": "^1.4.7",
+    "debug": "^4.3.7",
+    "express": "^4.21.1",
     "morgan": "^1.10.0",
     "vite-express": "0.11.1"
-  }
+  },
+  "packageManager": "pnpm@9.12.3+sha512.cce0f9de9c5a7c95bef944169cc5dfe8741abfb145078c0d508b868056848a87c81e626246cb60967cbd7fd29a6c062ef73ff840d96b3c86c40ac92cf4a813ee"
 }
